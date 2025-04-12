@@ -67,23 +67,6 @@ uvicorn main:app --reload
 
 ---
 
-## 🐳 Running with Docker
-
-If you prefer to use Docker:
-
-1. **Build the Docker Image:**
-
-   ```bash
-   docker build -t nextcloud-uploader .
-   ```
-
-2. **Run the Container:**
-
-   ```bash
-   docker run --env-file .env -p 8000:8000 nextcloud-uploader
-   ```
-
----
 
 ## 🔁 API Usage
 
@@ -115,20 +98,6 @@ curl -X POST "http://localhost:8000/upload/" \
   "status": "success",
   "file_url": "https://your-nextcloud.com/remote.php/dav/files/user/videos/video.mp4"
 }
-```
-
----
-
-## 📁 Folder Structure
-
-```
-nextcloud-uploader/
-├── main.py              # Main FastAPI app
-├── uploader.py          # File upload logic
-├── .env.example         # Sample environment configuration file
-├── requirements.txt     # Python dependencies list
-├── Dockerfile           # Docker build configuration
-└── README.md            # Project documentation
 ```
 
 ---
